@@ -1,0 +1,12 @@
+output "%monitor%" {
+    mode "%mode%"
+
+    transform "%transform%"
+    position x=%position% y=0
+
+    hot-corners {
+        off
+    }
+
+    scale 1
+}

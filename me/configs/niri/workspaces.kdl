@@ -1,0 +1,40 @@
+workspace "^1" {
+    open-on-output "%monitor%"
+}
+
+workspace "^2" {
+    open-on-output "%monitor%"
+}
+
+workspace "^3" {
+    open-on-output "%monitor%"
+}
+
+workspace "^4" {
+    open-on-output "%monitor%"
+}
+
+workspace "^5" {
+    open-on-output "%monitor%"
+}
+
+workspace "^6" {
+    open-on-output "%monitor%"
+}
+
+workspace "^7" {
+    open-on-output "%monitor%"
+}
+
+workspace "^8" {
+    open-on-output "%monitor%"
+}
+
+workspace "^9" {
+    open-on-output "%monitor%"
+}
+
+workspace "^10" {
+    open-on-output "%monitor%"
+}
+

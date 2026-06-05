@@ -1,0 +1,21 @@
+    %focus%+1 { focus-workspace "^1"; }
+    %focus%+2 { focus-workspace "^2"; }
+    %focus%+3 { focus-workspace "^3"; }
+    %focus%+4 { focus-workspace "^4"; }
+    %focus%+5 { focus-workspace "^5"; }
+    %focus%+6 { focus-workspace "^6"; }
+    %focus%+7 { focus-workspace "^7"; }
+    %focus%+8 { focus-workspace "^8"; }
+    %focus%+9 { focus-workspace "^9"; }
+    %focus%+0 { focus-workspace "^10"; }
+    %move%+1 { move-window-to-workspace "^1"; }
+    %move%+2 { move-window-to-workspace "^2"; }
+    %move%+3 { move-window-to-workspace "^3"; }
+    %move%+4 { move-window-to-workspace "^4"; }
+    %move%+5 { move-window-to-workspace "^5"; }
+    %move%+6 { move-window-to-workspace "^6"; }
+    %move%+7 { move-window-to-workspace "^7"; }
+    %move%+8 { move-window-to-workspace "^8"; }
+    %move%+9 { move-window-to-workspace "^9"; }
+    %move%+0 { move-window-to-workspace "^10"; }
+

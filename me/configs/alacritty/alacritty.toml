@@ -1,0 +1,59 @@
+[colors.bright]
+black = "#583C63"
+blue = "#9D87FF"
+cyan = "#68DDF9"
+green = "#39EF7C"
+magenta = "#FF66FF"
+red = "#FF4F6F"
+white = "#FFDDF3"
+yellow = "#FFEE5E"
+
+[colors.cursor]
+cursor = "#D3C6D3"
+text = "#1E121E"
+
+[colors.normal]
+black = "#38263F"
+blue = "#8A76E0"
+cyan = "#58B7CE"
+green = "#2CBA60"
+magenta = "#E059E0"
+red = "#DD4460"
+white = "#E2C5D8"
+yellow = "#DBCD51"
+
+[colors.primary]
+background = "#1E121E"
+foreground = "#B7ACB7"
+
+[font]
+size = 16
+
+[font.bold]
+family = "Ttyp0 OTB"
+style = "Regular"
+
+[font.italic]
+family = "Ttyp0 OTB"
+style = "Italic"
+
+[font.normal]
+family = "Ttyp0 OTB"
+style = "Regular"
+
+[[keyboard.bindings]]
+action = "None"
+key = "F"
+mods = "Control|Shift"
+
+[[keyboard.bindings]]
+action = "SpawnNewInstance"
+key = "T"
+mods = "Control|Shift"
+
+[window]
+opacity = 0.95
+
+[window.padding]
+x = 6
+y = 6

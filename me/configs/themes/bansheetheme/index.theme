@@ -1,0 +1,9 @@
+[X-GNOME-Metatheme]
+Name=bansheetheme
+Type=X-GNOME-Metatheme
+Comment=There is only one
+Encoding=UTF-8
+GtkTheme=bansheetheme
+IconTheme=oomox-Catppuccin-Mocha
+CursorTheme=Adwaita
+CursorSize=24

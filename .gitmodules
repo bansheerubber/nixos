@@ -1,0 +1,3 @@
+[submodule "me/configs/nvim"]
+	path = me/configs/nvim
+	url = https://github.com/bansheerubber/.config-nvim

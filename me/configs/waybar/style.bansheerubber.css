@@ -1,0 +1,49 @@
+* {
+	font-family: 'Ttyp0 OTB';
+	font-size: 20px;
+	color: #B7ACB7
+}
+
+window#waybar {
+	background-color: #1E121E;
+}
+
+#battery {
+	padding-right: 4px;
+}
+
+#workspaces button {
+	min-width: 0px;
+	padding: 0px 8px;
+	border-radius: 0px;
+	border: none;
+}
+
+#workspaces button.focused,
+#workspaces button.focused:hover,
+#workspaces button.active,
+#workspaces button.active:hover {
+	background-color: #322238;
+}
+
+#workspaces button.urgent {
+	background-color: #BD2C40;
+}
+
+#workspaces button:hover {
+	background: none;
+	box-shadow: inherit;
+	text-shadow: inherit;
+	transition: none;
+}
+
+#mode {
+	background-color: #FFEE5E;
+	color: #1E121E;
+	padding: 0px 5px;
+	margin-left: 2px;
+}
+
+#image {
+	margin-top: 0px;
+}

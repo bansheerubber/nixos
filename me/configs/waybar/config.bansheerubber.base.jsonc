@@ -1,0 +1,52 @@
+{
+	"height": 32,
+	"spacing": 10,
+	"output": "%output%",
+	"modules-left": [
+		"niri/workspaces",
+		"sway/mode",
+		"custom/upload",
+		"image#niri",
+	],
+	"modules-center": [
+		"clock",
+	],
+	"modules-right": [
+		"pulseaudio",
+		"custom/audiomode",
+		"custom/chargerate",
+		"battery",
+	],
+	"niri/workspaces": {
+		"disable-click": true,
+	},
+	"clock": {
+		"format": "{:%A %d %b, %I:%M %p}",
+		"tooltip": false,
+	},
+	"pulseaudio": {
+		"format": "{volume}%",
+		"format-muted": "muted",
+	},
+	"battery": {
+		"bat": "BAT1",
+		"format": "{capacity}%",
+	},
+	"custom/chargerate": {
+		"exec": "$HOME/.local/scripts/charge-rate.sh",
+		"interval": 10,
+	},
+	"custom/upload": {
+		"exec": "polybar-watcher watch \"/home/me/Projects/bansheeshare2/upload-debris\"",
+	},
+	"custom/audiomode": {
+		"exec": "polybar-watcher listen 15310 \"python /home/me/.local/scripts/audio.py get-sink-source\"",
+		"on-click": "python /home/me/.local/scripts/audio.py increment-sink",
+		"on-click-right": "python /home/me/.local/scripts/audio.py increment-sink",
+	},
+	"image#niri": {
+		"path": "/home/me/.local/share/bansheeniri/map.%output%.png",
+		"interval": 30,
+		"signal": 1,
+	},
+}

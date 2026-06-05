@@ -1,0 +1,10 @@
+$variant: 'light';
+
+@import 'colors';
+@import 'drawing';
+@import 'common';
+@import 'colors-public';
+
+.thunar .sidebar .view {
+	background-color: #261A2B;
+}
