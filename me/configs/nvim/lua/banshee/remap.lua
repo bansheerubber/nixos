@@ -27,57 +27,6 @@ vim.keymap.set("n", "<C-s>", ":w<CR>")
 vim.keymap.set("i", "<C-s>", "<C-C>w<CR>")
 vim.keymap.set("v", "<C-s>", "<C-O>w<CR>")
 
--- harpoon maps
-local mark = require("harpoon.mark")
-local ui = require("harpoon.ui")
-
-vim.keymap.set("n", "<C-a>", function()
-	print("harpooned " .. vim.api.nvim_buf_get_name(0))
-	mark.add_file()
-end)
-
-vim.keymap.set("n", "<C-b>", ui.toggle_quick_menu)
-
-vim.keymap.set("n", "<leader>1", function()
-	ui.nav_file(1)
-end)
-
-vim.keymap.set("n", "<leader>2", function()
-	ui.nav_file(2)
-end)
-
-vim.keymap.set("n", "<leader>3", function()
-	ui.nav_file(3)
-end)
-
-vim.keymap.set("n", "<leader>4", function()
-	ui.nav_file(4)
-end)
-
-vim.keymap.set("n", "<leader>5", function()
-	ui.nav_file(5)
-end)
-
-vim.keymap.set("n", "<leader>6", function()
-	ui.nav_file(6)
-end)
-
-vim.keymap.set("n", "<leader>7", function()
-	ui.nav_file(7)
-end)
-
-vim.keymap.set("n", "<leader>8", function()
-	ui.nav_file(8)
-end)
-
-vim.keymap.set("n", "<leader>9", function()
-	ui.nav_file(9)
-end)
-
-vim.keymap.set("n", "<leader>0", function()
-	ui.nav_file(0)
-end)
-
 -- undotree stuff
 vim.keymap.set("n", "<leader>u", ":UndotreeToggle<CR>")
 

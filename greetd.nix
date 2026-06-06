@@ -2,6 +2,7 @@
   config,
   lib,
   pkgs,
+  type,
   ...
 }:
 let
@@ -105,17 +106,29 @@ let
     exec bansheedm2
 
     bar {
-            swaybar_command ${start-waybar}
+      swaybar_command ${start-waybar}
     }
   '';
 in
 {
-  services.greetd = {
-    enable = true;
-    settings = {
-      default_session = {
-        command = "${pkgs.sway}/bin/sway --config ${swayConfig} 2> /dev/null";
+  services.greetd =
+    if (type == "laptop") then
+      {
+        enable = true;
+        settings = {
+          default_session = {
+            command = "${pkgs.sway}/bin/sway --config ${swayConfig} 2> /dev/null";
+          };
+        };
+      }
+    else
+      {
+        enable = true;
+        settings = {
+          default_session = {
+            command = "${config.programs.niri.package}/bin/niri-session";
+            user = "me";
+          };
+        };
       };
-    };
-  };
 }

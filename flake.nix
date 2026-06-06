@@ -21,30 +21,26 @@
       ...
     }@inputs:
     let
-      systems = [
-        "x86_64-linux"
-      ];
-      forAllSystems = nixpkgs.lib.genAttrs systems;
+      helpers = (
+        import ./helpers.nix {
+          home-manager = home-manager;
+          inputs = inputs;
+          nixpkgs = nixpkgs;
+        }
+      );
     in
     {
-      packages = forAllSystems (system: import ./pkgs nixpkgs.legacyPackages.${system});
-
-      nixosConfigurations.bansheerubber = nixpkgs.lib.nixosSystem {
-        specialArgs = {
-          inherit inputs;
+      nixosConfigurations = {
+        bansheerubber = helpers.makeHost {
           hostname = "bansheerubber";
+          system = "x86_64-linux";
+          type = "laptop";
         };
-        modules = [
-          ./configuration.nix
-          home-manager.nixosModules.home-manager
-          {
-            home-manager = {
-              useGlobalPkgs = true;
-              useUserPackages = true;
-              users.me = ./me/home-manager.nix;
-            };
-          }
-        ];
+        bansheelittle = helpers.makeHost {
+          hostname = "bansheelittle";
+          system = "aarch64-linux";
+          type = "appliance";
+        };
       };
     };
 }

@@ -1,6 +1,9 @@
 {
-  pkgs,
+  hostname,
   inputs,
+  lib,
+  pkgs,
+  type,
   ...
 }:
 
@@ -8,6 +11,8 @@
   imports = [
     ./hardware-configuration.nix
     ./greetd.nix
+    ./modules/computer.nix
+    ./modules/laptop.nix
   ];
 
   nix.settings.experimental-features = [
@@ -18,7 +23,7 @@
   boot.loader.systemd-boot.enable = true;
   boot.loader.efi.canTouchEfiVariables = true;
 
-  networking.hostName = "bansheerubber";
+  networking.hostName = hostname;
   networking.networkmanager.enable = true;
   networking.extraHosts = ''
     127.0.0.1   localhost
@@ -110,9 +115,8 @@
     # CLI utils
     curl
     killall
-    obs-cmd
-    qbittorrent-cli
     rsync
+    stress
     unzip
     wget
 
@@ -150,26 +154,12 @@
     tree-sitter
 
     # programs
-    inputs.bansheefinder3.packages.${pkgs.system}.default
     alacritty
-    blender
-    chromium
     feh
-    gitkraken
+    firefox
     htop
-    kdePackages.okular
-    libreoffice
     neovim
     nmgui
-    obs-studio
-    qbittorrent
-    steam
-    texstudio
-    thunar
-    thunar-archive-plugin
-    thunar-volman
-    vlc
-    vscode
   ];
 
   fonts.packages = with pkgs; [
@@ -234,5 +224,10 @@
     };
   };
 
-  system.stateVersion = "26.05"; # Did you read the comment?
+  hardware.graphics = {
+    enable = true;
+    enable32Bit = true;
+  };
+
+  system.stateVersion = "26.05";
 }
