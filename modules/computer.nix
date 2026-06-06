@@ -10,7 +10,7 @@
   environment.systemPackages =
     with pkgs;
     lib.mkIf (type == "laptop" || type == "desktop") [
-      inputs.bansheefinder3.packages.${pkgs.system}.default
+      inputs.bansheefinder3.packages.${pkgs.stdenv.hostPlatform.system}.default
       blender
       chromium
       gitkraken

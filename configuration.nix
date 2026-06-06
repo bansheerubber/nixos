@@ -1,9 +1,7 @@
 {
   hostname,
   inputs,
-  lib,
   pkgs,
-  type,
   ...
 }:
 
@@ -121,11 +119,11 @@
     wget
 
     # desktop
-    inputs.bansheedm2.packages.${pkgs.system}.default
-    inputs.bansheeniri.packages.${pkgs.system}.default
-    inputs.fontdb-cache-loader.packages.${pkgs.system}.default
-    inputs.polybar-watcher.packages.${pkgs.system}.default
-    inputs.waybar.packages.${pkgs.system}.default
+    inputs.bansheedm2.packages.${pkgs.stdenv.hostPlatform.system}.default
+    inputs.bansheeniri.packages.${pkgs.stdenv.hostPlatform.system}.default
+    inputs.fontdb-cache-loader.packages.${pkgs.stdenv.hostPlatform.system}.default
+    inputs.polybar-watcher.packages.${pkgs.stdenv.hostPlatform.system}.default
+    inputs.waybar.packages.${pkgs.stdenv.hostPlatform.system}.default
     adwaita-fonts
     adwaita-icon-theme
     blueman
