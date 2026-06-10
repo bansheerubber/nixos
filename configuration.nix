@@ -13,6 +13,22 @@
     ./modules/laptop.nix
   ];
 
+  boot = {
+    kernelParams = [
+      "quiet"
+      "loglevel=3"
+      "udev.log_level=3"
+      "rd.udev.log_level=3"
+      "systemd.show_status=false"
+      "vt.global_cursor_default=0"
+      "nowatchdog"
+      "nmi_watchdog=0"
+    ];
+
+    consoleLogLevel = 3;
+    blacklistedKernelModules = [ "sp5100_tco" "watchdog" ];
+  };
+
   nix.settings.experimental-features = [
     "nix-command"
     "flakes"
@@ -116,11 +132,13 @@
     rsync
     stress
     unzip
+    usbutils
     wget
 
     # desktop
     inputs.bansheedm2.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.bansheeniri.packages.${pkgs.stdenv.hostPlatform.system}.default
+    inputs.bansheescripts.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.fontdb-cache-loader.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.polybar-watcher.packages.${pkgs.stdenv.hostPlatform.system}.default
     inputs.waybar.packages.${pkgs.stdenv.hostPlatform.system}.default
@@ -160,9 +178,22 @@
     nmgui
   ];
 
-  fonts.packages = with pkgs; [
-    uw-ttyp0
-  ];
+  fonts = {
+    enableDefaultPackages = true;
+    packages = with pkgs; [
+      dejavu_fonts
+      dina-font
+      fira-code
+      fira-code-symbols
+      liberation_ttf
+      mplus-outline-fonts.githubRelease
+      noto-fonts
+      noto-fonts-cjk-sans
+      noto-fonts-color-emoji
+      proggyfonts
+      uw-ttyp0
+    ];
+  };
 
   programs.niri.enable = true;
   security.polkit.enable = true;

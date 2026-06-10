@@ -1,6 +1,5 @@
 {
   config,
-  lib,
   pkgs,
   type,
   ...
@@ -88,6 +87,10 @@ let
     #!/bin/env bash
     exec waybar -c ${waybar-jsonc} -s ${waybar-css} &> /dev/null
   '';
+  backgroundImage = builtins.path {
+    path = ./background.png;
+    name = "backgroound.png";
+  };
   swayConfig = pkgs.writeText "sway-config" ''
     include /etc/sway/config.d/*
 
@@ -102,7 +105,7 @@ let
     bindsym Mod1+XF86MonBrightnessDown exec brightnessctl set 0%
 
     exec wlsunset -t 4000 -T 4001 -d 0
-    exec swaybg -m fill -i /etc/greetd/background.png
+    exec swaybg -m fill -i ${backgroundImage}
     exec bansheedm2
 
     bar {
