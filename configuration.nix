@@ -125,9 +125,13 @@
 
   nixpkgs.config.allowUnfree = true;
 
+  programs.bash.completion.enable = true;
+
   environment.systemPackages = with pkgs; [
     # CLI utils
+    bat
     curl
+    inotify-tools
     killall
     rsync
     stress

@@ -38,6 +38,51 @@ in
     recursive = true;
   };
 
+  programs.bash = {
+    enable = true;
+    bashrcExtra = ''
+      # If not running interactively, don't do anything
+      [[ $- != *i* ]] && return
+
+      stty -ixon
+      shopt -s autocd
+
+      alias ls='ls --color=auto'
+      alias grep='grep --color=auto'
+
+      export EDITOR=nvim
+      export SUDO_EDITOR=nvim
+
+      export HISTSIZE=-1
+
+      if [ -n "$SSH_CLIENT" ]; then
+        export XDG_RUNTIME_DIR=/run/user/$(id -u me)
+        export PS1="\u@\H \w/ >> "
+      elif [ "$SHLVL" -ge 4 ]; then
+        export PS1="\u \w/ << "
+      else
+        export PS1="\u \w/ >> "
+      fi
+
+      function cd () {
+        builtin cd "$@"
+        if test -f .bansheerc; then
+          source .bansheerc
+        fi
+      }
+
+      function cdp () {
+        cd /home/me/Projects/$@
+      }
+
+      if [ "$SHLVL" -lt 4 ]; then
+        if test -f .bansheerc; then
+          source .bansheerc
+        fi
+      fi
+    '';
+  };
+
   gtk = {
     enable = true;
 
