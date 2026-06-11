@@ -149,6 +149,7 @@
     adwaita-fonts
     adwaita-icon-theme
     blueman
+    bluez
     brightnessctl
     kdePackages.breeze
     mako
@@ -240,6 +241,8 @@
     wireplumber.enable = true;
   };
 
+  services.blueman.enable = true;
+
   services.gvfs.enable = true;
   services.envfs.enable = true;
 
@@ -257,9 +260,25 @@
     };
   };
 
-  hardware.graphics = {
-    enable = true;
-    enable32Bit = true;
+  hardware = {
+    graphics = {
+      enable = true;
+      enable32Bit = true;
+    };
+
+    bluetooth = {
+      enable = true;
+      powerOnBoot = true;
+    };
+
+    enableAllFirmware = true;
+    enableAllHardware = true;
+
+    keyboard.qmk.enable = true;
+
+    uinput.enable = true;
+
+    wooting.enable = true;
   };
 
   system.stateVersion = "26.05";
