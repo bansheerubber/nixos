@@ -5,13 +5,13 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
     home-manager.url = "github:nix-community/home-manager/release-26.05";
 
-    bansheedm2.url = "git+file:/home/me/Projects/bansheedm2";
-    bansheefinder3.url = "git+file:/home/me/Projects/bansheefinder3";
-    bansheeniri.url = "git+file:/home/me/Projects/bansheeniri";
-    bansheescripts.url = "git+file:/home/me/Projects/bansheescripts";
-    fontdb-cache-loader.url = "git+file:/home/me/Projects/fontdb-cache-loader";
-    polybar-watcher.url = "git+file:/home/me/Projects/polybar-watcher";
-    waybar.url = "git+file:/home/me/Projects/Waybar";
+    bansheedm2.url = "github:bansheerubber/bansheedm2";
+    bansheefinder3.url = "github:bansheerubber/bansheefinder2";
+    bansheeniri.url = "github:bansheerubber/bansheeniri";
+    bansheescripts.url = "github:bansheerubber/bansheescripts";
+    fontdb-cache-loader.url = "github:bansheerubber/fontdb-cache-loader";
+    polybar-watcher.url = "github:bansheerubber/polybar-watcher";
+    waybar.url = "github:bansheerubber/Waybar";
   };
 
   outputs =
@@ -40,7 +40,8 @@
         bansheelittle = helpers.makeHost {
           hostname = "bansheelittle";
           system = "aarch64-linux";
-          type = "appliance";
+          # type = "appliance";
+          type = "laptop";
         };
       };
     };

@@ -6,17 +6,17 @@
         "nixpkgs": "nixpkgs"
       },
       "locked": {
-        "lastModified": 1780708183,
+        "lastModified": 1781198303,
         "narHash": "sha256-kyxY3KOUgGtZG4jKK/zAPcUpcPg3nWl3g3PjRymDuhY=",
-        "ref": "refs/heads/master",
-        "rev": "3e829fda802852423aa4e411cf5125ac48c50b85",
-        "revCount": 1,
-        "type": "git",
-        "url": "file:/home/me/Projects/bansheedm2"
+        "owner": "bansheerubber",
+        "repo": "bansheedm2",
+        "rev": "08f41fedcce63d5d0d49b50a625927ddf11c066c",
+        "type": "github"
       },
       "original": {
-        "type": "git",
-        "url": "file:/home/me/Projects/bansheedm2"
+        "owner": "bansheerubber",
+        "repo": "bansheedm2",
+        "type": "github"
       }
     },
     "bansheefinder3": {
@@ -25,17 +25,17 @@
         "nixpkgs": "nixpkgs_2"
       },
       "locked": {
-        "lastModified": 1780708232,
-        "narHash": "sha256-bkN8zVvW801bz7TRz2/richKSarl1MWfr1/8yqX8Qik=",
-        "ref": "refs/heads/main",
-        "rev": "2ced077fcd8028371884c0321cf7be07d747b320",
-        "revCount": 37,
-        "type": "git",
-        "url": "file:/home/me/Projects/bansheefinder3"
+        "lastModified": 1781198495,
+        "narHash": "sha256-hasvbTScovUjwDCNzchN2BlVawmdLSL1kk0PACxa28A=",
+        "owner": "bansheerubber",
+        "repo": "bansheefinder2",
+        "rev": "c27c18f34124b8bc69ee5daa89b0f47ba42a08fb",
+        "type": "github"
       },
       "original": {
-        "type": "git",
-        "url": "file:/home/me/Projects/bansheefinder3"
+        "owner": "bansheerubber",
+        "repo": "bansheefinder2",
+        "type": "github"
       }
     },
     "bansheeniri": {
@@ -44,17 +44,17 @@
         "nixpkgs": "nixpkgs_3"
       },
       "locked": {
-        "lastModified": 1780708285,
+        "lastModified": 1781198572,
         "narHash": "sha256-ug6c+OAYxF4NHDyee8nUQ0bABJHYyKfwe1e4S+MNUKQ=",
-        "ref": "refs/heads/master",
-        "rev": "7df57d6f68bc24ceafd55508b3f01890deb28634",
-        "revCount": 3,
-        "type": "git",
-        "url": "file:/home/me/Projects/bansheeniri"
+        "owner": "bansheerubber",
+        "repo": "bansheeniri",
+        "rev": "52369db9206dcbe0c43d77d956c07e8abbd64bc9",
+        "type": "github"
       },
       "original": {
-        "type": "git",
-        "url": "file:/home/me/Projects/bansheeniri"
+        "owner": "bansheerubber",
+        "repo": "bansheeniri",
+        "type": "github"
       }
     },
     "bansheescripts": {
@@ -64,15 +64,15 @@
       "locked": {
         "lastModified": 1781071397,
         "narHash": "sha256-D5++kYh93OcxDCdlkNmsSq9WuJ36/zDSd4DHaH99YbM=",
-        "ref": "refs/heads/master",
+        "owner": "bansheerubber",
+        "repo": "bansheescripts",
         "rev": "ff925624d55a0103e9458293d8a1890fcff74d13",
-        "revCount": 1,
-        "type": "git",
-        "url": "file:/home/me/Projects/bansheescripts"
+        "type": "github"
       },
       "original": {
-        "type": "git",
-        "url": "file:/home/me/Projects/bansheescripts"
+        "owner": "bansheerubber",
+        "repo": "bansheescripts",
+        "type": "github"
       }
     },
     "flake-compat": {
@@ -189,15 +189,15 @@
       "locked": {
         "lastModified": 1780708317,
         "narHash": "sha256-FOnHkvYhy2wyRXMYgSeJKF0fw9nEuvgzdUjFE9Ymt0Q=",
-        "ref": "refs/heads/master",
+        "owner": "bansheerubber",
+        "repo": "fontdb-cache-loader",
         "rev": "3dbb1be367787652b09ba2b601e0e9abdd8fce39",
-        "revCount": 1,
-        "type": "git",
-        "url": "file:/home/me/Projects/fontdb-cache-loader"
+        "type": "github"
       },
       "original": {
-        "type": "git",
-        "url": "file:/home/me/Projects/fontdb-cache-loader"
+        "owner": "bansheerubber",
+        "repo": "fontdb-cache-loader",
+        "type": "github"
       }
     },
     "home-manager": {
@@ -285,11 +285,11 @@
     },
     "nixpkgs_5": {
       "locked": {
-        "lastModified": 1780734595,
-        "narHash": "sha256-DmTfP92QFYRLOGXlMIE54MAgxSJjDWocl3gRNOu72Os=",
+        "lastModified": 1780902259,
+        "narHash": "sha256-q8yYEC5f1mFlQO9RGna4LTc9QrcvWunX6FYp83munkQ=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "9b696460ac78b5ccfc17c854d8c976f20456e943",
+        "rev": "bd0ff2d3eac24699c3664d5966b9ef36f388e2ca",
         "type": "github"
       },
       "original": {
@@ -333,11 +333,11 @@
     },
     "nixpkgs_8": {
       "locked": {
-        "lastModified": 1780734595,
-        "narHash": "sha256-DmTfP92QFYRLOGXlMIE54MAgxSJjDWocl3gRNOu72Os=",
+        "lastModified": 1780902259,
+        "narHash": "sha256-q8yYEC5f1mFlQO9RGna4LTc9QrcvWunX6FYp83munkQ=",
         "owner": "nixos",
         "repo": "nixpkgs",
-        "rev": "9b696460ac78b5ccfc17c854d8c976f20456e943",
+        "rev": "bd0ff2d3eac24699c3664d5966b9ef36f388e2ca",
         "type": "github"
       },
       "original": {
@@ -371,15 +371,15 @@
       "locked": {
         "lastModified": 1780708338,
         "narHash": "sha256-KGkjTOp4RCXVNpNBuRywvqRThienANKYzZDOsNTuvOg=",
-        "ref": "refs/heads/main",
+        "owner": "bansheerubber",
+        "repo": "polybar-watcher",
         "rev": "f517d7799c891c0fe4f7ad5e7e6cc143c0b2ece3",
-        "revCount": 1,
-        "type": "git",
-        "url": "file:/home/me/Projects/polybar-watcher"
+        "type": "github"
       },
       "original": {
-        "type": "git",
-        "url": "file:/home/me/Projects/polybar-watcher"
+        "owner": "bansheerubber",
+        "repo": "polybar-watcher",
+        "type": "github"
       }
     },
     "root": {
@@ -476,17 +476,17 @@
         "nixpkgs": "nixpkgs_9"
       },
       "locked": {
-        "lastModified": 1780708381,
-        "narHash": "sha256-4KLhLRPzk/v/sCjH3y1Pn1I32HcGzCwPf0Ew9j9wrMc=",
-        "ref": "refs/heads/master",
-        "rev": "905a5c21a4c330a40879e0aec2e622c693ec8868",
-        "revCount": 4412,
-        "type": "git",
-        "url": "file:/home/me/Projects/Waybar"
+        "lastModified": 1781199030,
+        "narHash": "sha256-4IO7gnjRISUUHlH+RZcq9Pi7VScXMF6yEFY3HwdWJ8w=",
+        "owner": "bansheerubber",
+        "repo": "Waybar",
+        "rev": "5e50cb6f5169c7108948740b0dad06cc0992d2d1",
+        "type": "github"
       },
       "original": {
-        "type": "git",
-        "url": "file:/home/me/Projects/Waybar"
+        "owner": "bansheerubber",
+        "repo": "Waybar",
+        "type": "github"
       }
     }
   },

@@ -19,6 +19,7 @@
 	],
 	"niri/workspaces": {
 		"disable-click": true,
+		"hide-empty": true,
 	},
 	"clock": {
 		"format": "{:%A %d %b, %I:%M %p}",
