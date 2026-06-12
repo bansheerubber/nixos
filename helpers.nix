@@ -8,6 +8,7 @@
   makeHost =
     {
       hostname,
+      modules,
       system,
       type,
     }:
@@ -28,6 +29,6 @@
             users.me = ./me/home-manager.nix;
           };
         }
-      ];
+      ] ++ modules;
     };
 }

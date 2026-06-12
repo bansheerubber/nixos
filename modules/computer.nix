@@ -9,23 +9,28 @@
 {
   environment.systemPackages =
     with pkgs;
-    lib.mkIf (type == "laptop" || type == "desktop") [
-      inputs.bansheefinder3.packages.${pkgs.stdenv.hostPlatform.system}.default
-      blender
-      chromium
-      gitkraken
-      kdePackages.okular
-      libreoffice
-      obs-cmd
-      obs-studio
-      qbittorrent
-      qbittorrent-cli
-      steam
-      texstudio
-      thunar
-      thunar-archive-plugin
-      thunar-volman
-      vlc
-      vscode
+    lib.mkMerge [
+      (lib.mkIf (type == "laptop" || type == "desktop") [
+        inputs.bansheefinder3.packages.${pkgs.stdenv.hostPlatform.system}.default
+        chromium
+        kdePackages.okular
+        libreoffice
+        qbittorrent
+        qbittorrent-cli
+        texstudio
+        thunar
+        thunar-archive-plugin
+        thunar-volman
+        vlc
+        vscode
+      ])
+
+      (lib.mkIf (pkgs.stdenv.hostPlatform.system == "x86_64-linux") [
+        blender
+        gitkraken
+        obs-cmd
+        obs-studio
+        steam
+      ])
     ];
 }

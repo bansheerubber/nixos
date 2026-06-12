@@ -18,13 +18,13 @@ in
     "niri/binds.kdl".source = ./configs/niri/binds.kdl;
     "niri/outputs.kdl".source = ./configs/niri/outputs.kdl;
     "niri/workspaces.kdl".source = ./configs/niri/workspaces.kdl;
+    "background2.png".source = ./configs/niri/background2.png;
 
     # alacritty
     "alacritty/alacritty.toml".source = ./configs/alacritty/alacritty.toml;
 
     # waybar
     "waybar/config.base.jsonc".source = ./configs/waybar/config.${hostname}.base.jsonc;
-    "waybar/config.jsonc".source = ./configs/waybar/config.${hostname}.jsonc;
     "waybar/style.css".source = ./configs/waybar/style.${hostname}.css;
   };
 
@@ -73,6 +73,10 @@ in
 
       function cdp () {
         cd /home/me/Projects/$@
+      }
+
+      function nrs () {
+        sudo nixos-rebuild switch
       }
 
       if [ "$SHLVL" -lt 4 ]; then

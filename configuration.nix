@@ -1,6 +1,7 @@
 {
   hostname,
   inputs,
+  lib,
   pkgs,
   ...
 }:
@@ -33,9 +34,6 @@
     "nix-command"
     "flakes"
   ];
-
-  boot.loader.systemd-boot.enable = true;
-  boot.loader.efi.canTouchEfiVariables = true;
 
   networking.hostName = hostname;
   networking.networkmanager.enable = true;
@@ -255,6 +253,7 @@
   services.openssh = {
     enable = true;
     settings = {
+      KbdInteractiveAuthentication = false;
       PasswordAuthentication = false;
       PermitRootLogin = "no";
     };
@@ -263,7 +262,7 @@
   hardware = {
     graphics = {
       enable = true;
-      enable32Bit = true;
+      enable32Bit = lib.mkIf (pkgs.stdenv.hostPlatform.system == "x86_64-linux") true;
     };
 
     bluetooth = {

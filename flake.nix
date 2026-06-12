@@ -5,13 +5,34 @@
     nixpkgs.url = "github:nixos/nixpkgs/nixos-26.05";
     home-manager.url = "github:nix-community/home-manager/release-26.05";
 
-    bansheedm2.url = "github:bansheerubber/bansheedm2";
-    bansheefinder3.url = "github:bansheerubber/bansheefinder2";
-    bansheeniri.url = "github:bansheerubber/bansheeniri";
-    bansheescripts.url = "github:bansheerubber/bansheescripts";
-    fontdb-cache-loader.url = "github:bansheerubber/fontdb-cache-loader";
-    polybar-watcher.url = "github:bansheerubber/polybar-watcher";
-    waybar.url = "github:bansheerubber/Waybar";
+    bansheedm2 = {
+      url = "github:bansheerubber/bansheedm2";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    bansheefinder3 = {
+      url = "github:bansheerubber/bansheefinder2";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    bansheeniri = {
+      url = "github:bansheerubber/bansheeniri";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    bansheescripts = {
+      url = "github:bansheerubber/bansheescripts";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    fontdb-cache-loader = {
+      url = "github:bansheerubber/fontdb-cache-loader";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    polybar-watcher = {
+      url = "github:bansheerubber/polybar-watcher";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
+    waybar = {
+      url = "github:bansheerubber/Waybar";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs =
@@ -34,14 +55,15 @@
       nixosConfigurations = {
         bansheerubber = helpers.makeHost {
           hostname = "bansheerubber";
+          modules = [ ./modules/systemd-boot.nix ];
           system = "x86_64-linux";
           type = "laptop";
         };
         bansheelittle = helpers.makeHost {
           hostname = "bansheelittle";
+          modules = [ ./modules/rpi-boot.nix ];
           system = "aarch64-linux";
-          # type = "appliance";
-          type = "laptop";
+          type = "appliance";
         };
       };
     };
