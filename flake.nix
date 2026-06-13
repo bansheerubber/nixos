@@ -55,7 +55,10 @@
       nixosConfigurations = {
         bansheerubber = helpers.makeHost {
           hostname = "bansheerubber";
-          modules = [ ./modules/systemd-boot.nix ];
+          modules = [
+            ./modules/systemd-boot.nix
+            ./modules/systems/bansheerubber.nix
+          ];
           system = "x86_64-linux";
           type = "laptop";
         };
