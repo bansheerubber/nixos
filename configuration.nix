@@ -173,7 +173,7 @@
     tree-sitter
 
     # programs
-    alacritty
+    (pkgs.callPackage ./packages/alacritty.nix {})
     feh
     firefox
     htop
