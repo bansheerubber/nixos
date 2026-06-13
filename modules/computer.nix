@@ -15,6 +15,7 @@
         chromium
         kdePackages.okular
         libreoffice
+        mpv
         qbittorrent
         qbittorrent-cli
         texstudio
@@ -25,12 +26,15 @@
         vscode
       ])
 
-      (lib.mkIf (pkgs.stdenv.hostPlatform.system == "x86_64-linux") [
-        blender
-        gitkraken
-        obs-cmd
-        obs-studio
-        steam
-      ])
+      (lib.mkIf
+        ((type == "laptop" || type == "desktop") && pkgs.stdenv.hostPlatform.system == "x86_64-linux")
+        [
+          blender
+          gitkraken
+          obs-cmd
+          obs-studio
+          steam
+        ]
+      )
     ];
 }
