@@ -31,6 +31,15 @@ in
     "mako/config".source = ./configs/mako/config;
   };
 
+  dconf = {
+    enable = true;
+    settings = {
+      "org/gnome/desktop/interface" = {
+        color-scheme = "prefer-dark";
+      };
+    };
+  };
+
   xdg.configFile."nvim" = {
     source = ./configs/nvim;
     recursive = true;
