@@ -26,6 +26,9 @@ in
     # waybar
     "waybar/config.base.jsonc".source = ./configs/waybar/config.${hostname}.base.jsonc;
     "waybar/style.css".source = ./configs/waybar/style.${hostname}.css;
+
+    # mako
+    "mako/config".source = ./configs/mako/config;
   };
 
   xdg.configFile."nvim" = {
